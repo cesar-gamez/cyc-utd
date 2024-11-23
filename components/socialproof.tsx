@@ -29,7 +29,7 @@ const socialProofs: SocialProof[] = [
 function SocialProofCard({ metric, description }: SocialProof) {
     return (
         <div className="flex flex-col items-center justify-center text-center">
-            <dt className="mb-2 text-3xl italic tracking-tight">
+            <dt className="mb-2 text-3xl italic tracking-tight text-primary">
                 <CountUp end={metric} duration={5} enableScrollSpy={true} scrollSpyOnce={true} />+
             </dt>
             <dd className="text-sm text-muted-foreground">{description}</dd>
@@ -39,9 +39,9 @@ function SocialProofCard({ metric, description }: SocialProof) {
 
 export default function SocialProof() {
     return (
-        <section className="bg-primary-foreground py-12">
-            <div className="container mx-auto max-w-screen-xl px-4 text-center p-24">
-                <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <section className="bg-primary-foreground">
+            <div className="container mx-auto max-w-screen-xl text-center px-4 py-24 lg:px-6 sm:py-32">
+                <dl className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {socialProofs.map((proof, index) => (
                         <SocialProofCard key={index} {...proof} />
                     ))}

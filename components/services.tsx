@@ -83,29 +83,30 @@ const Services = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const node = ref.current;
         const observer = new IntersectionObserver(
             (entries) => {
                 if (entries[0].isIntersecting) {
                     setIsVisible(true);
                 }
             },
-            { threshold: 0.01 },
+            { threshold: 0.2 },
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (node) {
+            observer.observe(node);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (node) {
+                observer.unobserve(node);
             }
         };
     }, []);
 
     return (
-        <section ref={ref} className={`transition-opacity duration-700 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
-            <div id="services" className="py-20 px-4 mx-auto max-w-screen-xl sm:py-32 lg:px-6">
+        <section ref={ref} className={`transition-opacity duration-900 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+            <div id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
                 <div className="max-w-screen-md mb-12 lg:mb-16">
                     <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">Our Services</h2>
                     <p className="text-lg text-muted-foreground">
