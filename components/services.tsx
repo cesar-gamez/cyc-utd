@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChartBar, PiggyBank, BarChart3, TrendingUp, Megaphone, Settings } from "lucide-react";
@@ -11,7 +12,7 @@ type Service = {
     tags: string[];
 };
 
-const servicesData = [
+const servicesData: Service[] = [
     {
         icon: <ChartBar className="w-5 h-5" />,
         title: "Market Insights",
@@ -78,19 +79,45 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
 };
 
 const Services = () => {
+    const ref = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.01 },
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
-        <section id="services" className="py-20 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
-            <div className="max-w-screen-md mb-12 lg:mb-16">
-                <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">Our Services</h2>
-                <p className="text-lg text-muted-foreground">
-                    Consult Your Community provides comprehensive consulting services to help businesses thrive. Our student consultants deliver data-driven
-                    insights and actionable solutions across various domains.
-                </p>
-            </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {servicesData.map((service, index) => (
-                    <ServiceCard key={index} {...service} />
-                ))}
+        <section ref={ref} className={`transition-opacity duration-700 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+            <div id="services" className="py-20 px-4 mx-auto max-w-screen-xl sm:py-32 lg:px-6">
+                <div className="max-w-screen-md mb-12 lg:mb-16">
+                    <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">Our Services</h2>
+                    <p className="text-lg text-muted-foreground">
+                        Each semester, our student consultants undertake consulting projects with diverse clients to deliver data-driven insights and actionable
+                        solutions across various domains.
+                    </p>
+                </div>
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {servicesData.map((service, index) => (
+                        <ServiceCard key={index} {...service} />
+                    ))}
+                </div>
             </div>
         </section>
     );
