@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { ChartBar, PiggyBank, BarChart3, TrendingUp, Megaphone, Settings } from "lucide-react";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChartBar, PiggyBank, BarChart3, TrendingUp, Megaphone, Settings } from "lucide-react";
+import Fade_in from "@/components/fade_in";
 
 type Service = {
     icon: React.ReactNode;
@@ -79,36 +80,11 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
 };
 
 const Services = () => {
-    const ref = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const node = ref.current;
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.2 },
-        );
-
-        if (node) {
-            observer.observe(node);
-        }
-
-        return () => {
-            if (node) {
-                observer.unobserve(node);
-            }
-        };
-    }, []);
-
     return (
-        <section ref={ref} className={`transition-opacity duration-900 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <Fade_in>
             <div id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
                 <div className="max-w-screen-md mb-12 lg:mb-16">
-                    <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">Our Services</h2>
+                    <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">What we offer</h2>
                     <p className="text-lg text-muted-foreground">
                         Each semester, our student consultants undertake consulting projects with diverse clients to deliver data-driven insights and actionable
                         solutions across various domains.
@@ -120,7 +96,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </Fade_in>
     );
 };
 
