@@ -4,7 +4,7 @@ import { ChartBar, PiggyBank, BarChart3, TrendingUp, Megaphone, Settings } from 
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Fade_in from "@/components/fade_in";
+import FadeIn from "@/components/fade-in";
 
 type Service = {
     icon: React.ReactNode;
@@ -81,7 +81,7 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
 
 const Services = () => {
     return (
-        <Fade_in>
+        <FadeIn>
             <div id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
                 <div className="max-w-screen-md mb-12 lg:mb-16">
                     <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">What we offer</h2>
@@ -96,7 +96,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-        </Fade_in>
+        </FadeIn>
     );
 };
 

@@ -6,7 +6,7 @@ type FadeInProps = {
     children: ReactNode;
 };
 
-function Fade_in({ children }: FadeInProps) {
+function FadeIn({ children }: FadeInProps) {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -39,4 +39,4 @@ function Fade_in({ children }: FadeInProps) {
     );
 }
 
-export default Fade_in;
+export default FadeIn;
