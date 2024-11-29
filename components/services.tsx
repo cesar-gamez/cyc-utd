@@ -4,7 +4,7 @@ import { ChartBar, PiggyBank, BarChart3, TrendingUp, Megaphone, Settings } from 
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import FadeIn from "@/components/fade-in";
+import FadeIn from "@/components/ui/fade-in";
 
 type Service = {
     icon: React.ReactNode;
@@ -64,12 +64,12 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
                     <div className="p-2 rounded-lg bg-secondary text-secondary-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                         {icon}
                     </div>
-                    <h3 className="text-xl font-bold text-primary">{title}</h3>
+                    <h3 className="text-xl text-primary">{title}</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">{description}</p>
                 <div className="flex flex-wrap gap-2">
                     {tags.map((tag, index) => (
-                        <Badge key={index} variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary-hover">
+                        <Badge key={index} className="bg-secondary text-secondary-foreground hover:bg-secondary-hover">
                             {tag}
                         </Badge>
                     ))}
@@ -82,9 +82,9 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
 const Services = () => {
     return (
         <FadeIn>
-            <div id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
+            <section id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
                 <div className="max-w-screen-md mb-12 lg:mb-16">
-                    <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-primary">What we offer</h2>
+                    <h2 className="mb-4 text-4xl tracking-tight text-primary">What we offer</h2>
                     <p className="text-lg text-muted-foreground">
                         Each semester, our student consultants undertake consulting projects with diverse clients to deliver data-driven insights and actionable
                         solutions across various domains.
@@ -95,7 +95,7 @@ const Services = () => {
                         <ServiceCard key={index} {...service} />
                     ))}
                 </div>
-            </div>
+            </section>
         </FadeIn>
     );
 };

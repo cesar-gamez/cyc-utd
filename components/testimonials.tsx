@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Play } from "lucide-react";
 
-import FadeIn from "@/components/fade-in";
+import FadeIn from "@/components/ui/fade-in";
 
 type Testimonial = {
     id: number;
@@ -50,9 +50,9 @@ const VideoTestimonials = () => {
 
     return (
         <FadeIn>
-            <div id="testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
+            <section id="testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-medium mb-4 text-primary">Our Impact Stories</h2>
+                    <h2 className="text-3xl mb-4 text-primary">Our Impact Stories</h2>
                     <p className="text-muted-foreground">Real experiences from our community</p>
                 </div>
 
@@ -91,7 +91,7 @@ const VideoTestimonials = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
         </FadeIn>
     );
 };

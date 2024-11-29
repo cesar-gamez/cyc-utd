@@ -19,12 +19,12 @@ function Hero() {
                     With social impact at the heart of what we do, our members become not just consultants, but community leaders.
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                    <Button asChild>
+                    <Button>
                         <a href={CONSULTANT_FORM_LINK} target="_blank" rel="noopener noreferrer">
                             Join as a Consultant
                         </a>
                     </Button>
-                    <Button variant="secondary" asChild>
+                    <Button variant="secondary">
                         <a href={BUSINESS_FORM_LINK} target="_blank" rel="noopener noreferrer">
                             Request Consulting Services
                         </a>
