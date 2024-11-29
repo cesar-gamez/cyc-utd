@@ -24,11 +24,17 @@ type RosterResponse = {
 };
 
 const COMPANIES: CompanyLogo[] = [
+    { name: "Chase", logo: "/chase.svg" },
+    { name: "Deloitte", logo: "/deloitte.svg" },
     { name: "Goldman Sachs", logo: "/goldman-sachs.svg" },
+    { name: "HubSpot", logo: "/hubspot.svg" },
     { name: "Indeed", logo: "/indeed.svg" },
     { name: "Jane Street", logo: "/jane-street.svg" },
     { name: "JP Morgan", logo: "/jp-morgan.svg" },
+    { name: "Niantic", logo: "/niantic.svg" },
     { name: "Paycom", logo: "/paycom.svg" },
+    { name: "Snowflake", logo: "/snowflake.svg" },
+    { name: "Southwest", logo: "/southwest.svg" },
     { name: "USAA", logo: "/usaa.svg" },
 ];
 
@@ -65,7 +71,7 @@ function AlumniNetwork() {
     const remainingCount = teamMembers.length - 5;
 
     return (
-        <section className="py-20 relative overflow-hidden bg-primary-foreground">
+        <section id="alumni-network" className="py-20 relative overflow-hidden bg-primary-foreground">
             <div className="container mx-auto px-4 space-y-8 relative z-10">
                 <div className="text-center space-y-4">
                     <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Check Out Our Alumni Network</h2>
@@ -77,7 +83,7 @@ function AlumniNetwork() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                     {COMPANIES.map((company, index) => (
                         <div key={index} className="flex items-center justify-center">
-                            <Image src={company.logo} alt={company.name} width={100} height={100} className="max-h-16 max-w-full object-contain" />
+                            <Image src={company.logo} alt={company.name} width={100} height={100} className="max-h-16" />
                         </div>
                     ))}
                 </div>

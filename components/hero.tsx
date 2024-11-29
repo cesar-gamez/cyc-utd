@@ -8,7 +8,7 @@ const BUSINESS_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7
 
 function Hero() {
     return (
-        <section className="relative h-screen flex items-center justify-center">
+        <section id="#" className="relative h-screen flex items-center justify-center">
             <Image src="/Hero.webp" alt="Hero Background" className="object-cover z-0" quality={100} priority fill />
             <div className="max-w-screen-xl px-4 mx-auto flex flex-col md:items-center text-center text-white z-10">
                 <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight">Consult Your Community</h1>
