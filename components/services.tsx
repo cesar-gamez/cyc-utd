@@ -81,8 +81,8 @@ const ServiceCard = ({ icon, title, description, tags }: Service) => {
 
 const Services = () => {
     return (
-        <FadeIn>
-            <section id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
+        <section id="services" className="mx-auto max-w-screen-xl py-24 px-4 sm:py-32 lg:px-6">
+            <FadeIn>
                 <div className="max-w-screen-md mb-12 lg:mb-16">
                     <h2 className="mb-4 text-4xl tracking-tight text-primary">What we offer</h2>
                     <p className="text-lg text-muted-foreground">
@@ -95,8 +95,8 @@ const Services = () => {
                         <ServiceCard key={index} {...service} />
                     ))}
                 </div>
-            </section>
-        </FadeIn>
+            </FadeIn>
+        </section>
     );
 };
 

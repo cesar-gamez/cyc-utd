@@ -24,7 +24,7 @@ type RosterResponse = {
 };
 
 const COMPANIES: CompanyLogo[] = [
-    { name: "Chase", logo: "/chase.svg" },
+    { name: "AT&T", logo: "/att.svg" },
     { name: "Deloitte", logo: "/deloitte.svg" },
     { name: "Goldman Sachs", logo: "/goldman-sachs.svg" },
     { name: "HubSpot", logo: "/hubspot.svg" },

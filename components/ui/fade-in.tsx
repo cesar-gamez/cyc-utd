@@ -33,9 +33,9 @@ function FadeIn({ children }: FadeInProps) {
     }, []);
 
     return (
-        <section ref={ref} className={`transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <div ref={ref} className={`transition-opacity duration-1000 ease-out ${isVisible ? "opacity-100" : "opacity-0"}`}>
             {children}
-        </section>
+        </div>
     );
 }
 
