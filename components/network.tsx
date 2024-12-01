@@ -38,7 +38,7 @@ const COMPANIES: CompanyLogo[] = [
     { name: "USAA", logo: "/usaa.svg" },
 ];
 
-function AlumniNetwork() {
+export default function Network() {
     const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -74,9 +74,9 @@ function AlumniNetwork() {
         <section id="#alumni-network" className="py-20 relative overflow-hidden bg-primary-foreground">
             <div className="container mx-auto px-4 space-y-10 relative z-10">
                 <div className="text-center space-y-4">
-                    <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Check Out Our Alumni Network</h2>
+                    <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Check Out Our Network</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Our alumni have gone on to work at some of the most prestigious companies in the world.
+                        Our members have gone on to work at some of the most prestigious companies in the world.
                     </p>
                 </div>
 
@@ -122,5 +122,3 @@ function AlumniNetwork() {
         </section>
     );
 }
-
-export default AlumniNetwork;
