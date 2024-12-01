@@ -42,7 +42,7 @@ function ContactUs() {
                 description: "Your message has been successfully submitted. We'll get back to you soon!",
                 variant: "default",
             });
-            
+
             form.reset();
         } catch {
             toast({
@@ -56,13 +56,12 @@ function ContactUs() {
     };
 
     return (
-        <section id="contact-us" className="mx-auto max-w-3xl py-20 px-4 sm:py-28 lg:px-6">
+        <section id="#contact-us" className="mx-auto max-w-3xl py-20 px-4 sm:py-28 lg:px-6">
             <FadeIn>
-                <div className="text-center mb-8 space-y-6">
+                <div className="text-center mb-6 space-y-6">
                     <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Contact Us</h2>
                     <p className="text-muted-foreground">
-                        Send us a message, and we&apos;ll get back to you as soon as possible. You can also
-                        reach us at{" "} 
+                        Send us a message, and we&apos;ll get back to you as soon as possible. You can also reach us at{" "}
                         <a href="mailto:utdallas@consultyourcommunity.org" className="underline text-primary">
                             utdallas@consultyourcommunity.org
                         </a>

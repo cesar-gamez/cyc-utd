@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     },
 ];
 
-const VideoTestimonials = () => {
+export default function VideoTestimonials() {
     const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
     const getYoutubeEmbedUrl = (url: string) => {
@@ -49,7 +49,7 @@ const VideoTestimonials = () => {
     };
 
     return (
-        <section id="testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
+        <section id="#testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
             <FadeIn>
                 <div className="text-center mb-12">
                     <h2 className="text-3xl mb-4 text-primary">Our Impact Stories</h2>
@@ -94,6 +94,4 @@ const VideoTestimonials = () => {
             </FadeIn>
         </section>
     );
-};
-
-export default VideoTestimonials;
+}

@@ -4,7 +4,7 @@ import SocialProof from "@/components/socialproof";
 import VideoTestimonials from "@/components/testimonials";
 import AlumniNetwork from "@/components/alumni-network";
 import ContactUs from "@/components/contact-us";
-import OrganizationRedirect from "@/components/greater-org";
+import CallToAction from "@/components/call-to-action";
 
 export default function Home() {
     return (
@@ -15,7 +15,7 @@ export default function Home() {
             <VideoTestimonials />
             <AlumniNetwork />
             <ContactUs />
-            <OrganizationRedirect />
+            <CallToAction />
         </>
     );
 }

@@ -39,7 +39,7 @@ function SocialProofCard({ metric, description }: SocialProof) {
 
 export default function SocialProof() {
     return (
-        <section id="social-proof" className="bg-primary-foreground">
+        <section id="#social-proof" className="bg-primary-foreground">
             <div className="container mx-auto max-w-screen-xl text-center px-4 py-24 lg:px-6 sm:py-32">
                 <dl className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {socialProofs.map((proof, index) => (
