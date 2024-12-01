@@ -56,7 +56,7 @@ function ContactUs() {
     };
 
     return (
-        <section id="#contact-us" className="mx-auto max-w-3xl py-20 px-4 sm:py-28 lg:px-6">
+        <section id="contact-us" className="mx-auto max-w-3xl py-20 px-4 sm:py-28 lg:px-6">
             <FadeIn>
                 <div className="text-center mb-6 space-y-6">
                     <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Contact Us</h2>

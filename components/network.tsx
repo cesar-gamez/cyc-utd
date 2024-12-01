@@ -71,7 +71,7 @@ export default function Network() {
     const remainingCount = teamMembers.length - 5;
 
     return (
-        <section id="#alumni-network" className="py-20 relative overflow-hidden bg-primary-foreground">
+        <section id="network" className="py-20 relative overflow-hidden bg-primary-foreground">
             <div className="container mx-auto px-4 space-y-10 relative z-10">
                 <div className="text-center space-y-4">
                     <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Check Out Our Network</h2>

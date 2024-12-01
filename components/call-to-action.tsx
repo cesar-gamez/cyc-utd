@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function CallToAction() {
     return (
-        <section id="#call-to-action" className="relative py-16">
+        <section id="call-to-action" className="relative py-16">
             <Image
                 src="/team-picture-spring2023.webp"
                 alt="team picture spring 2023"
