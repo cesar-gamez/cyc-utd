@@ -34,7 +34,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="#" className="flex items-center space-x-3" aria-label="Navigate to home">
                     <Image src="/logo.jpeg" width={40} height={40} alt="CYC UTD Logo" className="rounded-sm" priority />
-                    <span className="text-xl font-semibold text-primary">CYC UT Dallas</span>
+                    <span className="text-xl text-primary">CYC UT Dallas</span>
                 </Link>
 
                 {/* Desktop Navigation */}

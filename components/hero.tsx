@@ -17,7 +17,7 @@ function Hero() {
                 <p className="max-w-2xl mb-6 font-light md:text-lg lg:text-xl">
                     With social impact at the heart of what we do, our members become not just consultants, but community leaders.
                 </p>
-                <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
                     <Button>
                         <Link href={CONSULTANT_FORM_LINK} target="_blank" rel="noopener noreferrer">
                             Join as a consultant
