@@ -11,7 +11,7 @@ export default function CallToAction() {
             <Image
                 src="/team-picture-spring2023.webp"
                 alt="team picture spring 2023"
-                className="object-cover object-[50%_40%] w-full h-full brightness-70"
+                className="object-cover object-[50%_40%] w-full h-full brightness-60"
                 quality={100}
                 priority
                 fill
@@ -23,12 +23,12 @@ export default function CallToAction() {
                     real impact.
                 </p>
                 <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
-                    <Button size="lg">
+                    <Button size="lg" variant={"secondary"}>
                         <Link href={CONSULTANT_FORM_LINK} target="_blank" rel="noopener noreferrer">
                             Become a consultant
                         </Link>
                     </Button>
-                    <Button size="lg">
+                    <Button size="lg" variant={"secondary"}>
                         <Link href={BUSINESS_FORM_LINK} target="_blank" rel="noopener noreferrer">
                             Work with us
                         </Link>

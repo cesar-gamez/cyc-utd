@@ -5,6 +5,7 @@ import VideoTestimonials from "@/components/testimonials";
 import Network from "@/components/network";
 import ContactUs from "@/components/contact-us";
 import CallToAction from "@/components/call-to-action";
+import FAQ from "@/components/faq";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <Network />
             <ContactUs />
             <CallToAction />
+            <FAQ />
         </>
     );
 }
