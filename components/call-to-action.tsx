@@ -9,8 +9,8 @@ export default function CallToAction() {
     return (
         <section id="call-to-action" className="relative py-16">
             <Image
-                src="/team-picture-spring2023.webp"
-                alt="team picture spring 2023"
+                src="/team-picture-spring2024.webp"
+                alt="team picture spring 2024"
                 className="object-cover object-[50%_40%] w-full h-full brightness-60"
                 quality={100}
                 priority
