@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-6 items-center">
                     <div className="flex items-center space-x-4">
-                        <Image src="/logo.jpeg" width={48} height={48} alt="CYC Logo" className="rounded-lg" />
+                        <Image src="/logo.jpeg" width={48} height={48} alt="CYC Logo" className="rounded-sm" />
                         <div>
                             <h3 className="text-xl font-semibold">CYC Dallas Chapter</h3>
                             <p className="text-sm text-muted-foreground">Empowering Dallas&apos;s small business owners.</p>

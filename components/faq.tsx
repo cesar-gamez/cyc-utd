@@ -51,7 +51,7 @@ const FAQ_ITEMS = [
 
 export default function FAQ() {
     return (
-        <section id="faq" className="mx-auto max-w-4xl py-20 px-4 sm:py-24 lg:px-6">
+        <section id="faq" className="mx-auto max-w-4xl py-20 px-6 lg:px-0 sm:py-24">
             <FadeIn>
                 <h2 className="text-3xl md:text-4xl text-primary tracking-tight text-center mb-8">Frequently Asked Questions</h2>
                 <Accordion type="single" collapsible>
