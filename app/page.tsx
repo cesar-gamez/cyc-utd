@@ -3,7 +3,7 @@ import Services from "@/components/services";
 import SocialProof from "@/components/socialproof";
 import VideoTestimonials from "@/components/testimonials";
 import Network from "@/components/network";
-import ContactUs from "@/components/contact-us";
+import Contact from "@/components/contact";
 import CallToAction from "@/components/call-to-action";
 import FAQ from "@/components/faq";
 
@@ -15,7 +15,7 @@ export default function Home() {
             <SocialProof />
             <VideoTestimonials />
             <Network />
-            <ContactUs />
+            <Contact />
             <CallToAction />
             <FAQ />
         </>

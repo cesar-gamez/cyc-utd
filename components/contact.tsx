@@ -17,7 +17,7 @@ const contactFormSchema = z.object({
     message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
-function ContactUs() {
+function Contact() {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -29,7 +29,7 @@ function ContactUs() {
     const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
         setIsSubmitting(true);
         try {
-            const response = await fetch("/api/py/contact_form", {
+            const response = await fetch("/api/py/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
@@ -122,4 +122,4 @@ function ContactUs() {
     );
 }
 
-export default ContactUs;
+export default Contact;
