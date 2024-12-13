@@ -7,25 +7,44 @@ import { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK } from "@/lib/constants";
 
 function Hero() {
     return (
-        <section id="#" className="relative h-screen flex items-center justify-center">
-            <Image src="/hero.webp" alt="Hero Background" className="object-cover object-[50%_30%] w-full h-full brightness-80" quality={100} priority fill />
-            <div className="max-w-screen-xl px-4 mx-auto flex flex-col md:items-center text-center text-white z-10">
-                <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight">Consult Your Community</h1>
-                <p className="max-w-2xl mb-4 font-light md:text-lg lg:text-xl">
-                    Student-led UT Dallas organization that provides free consulting services to Dallas&apos;s small, minority-owned businesses and nonprofits.
-                </p>
-                <p className="max-w-2xl mb-6 font-light md:text-lg lg:text-xl">
-                    With social impact at the heart of what we do, our members become not just consultants, but community leaders.
-                </p>
-                <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-                    <Button>
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0">
+                <Image
+                    src="/hero.webp"
+                    alt="Community consulting team working together"
+                    className="object-cover object-[50%_30%] w-full h-full"
+                    quality={100}
+                    priority
+                    fill
+                />
+            </div>
+
+            {/* Content Container */}
+            <div className="relative max-w-screen-xl h-full px-4 mx-auto text-white z-10 text-center">
+                <h1 id="hero-title" className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 animate-fade-in-up">
+                    Consult Your Community
+                </h1>
+
+                <div className="max-w-2xl mx-auto space-y-4 mb-8">
+                    <p className="font-light text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-200">
+                        A student-led UT Dallas organization dedicated to providing <strong>free consulting services</strong> to Dallas&apos;s small,
+                        minority-owned businesses and nonprofits.
+                    </p>
+                    <p className="font-light text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400">
+                        We&apos;re more than consultants—we&apos;re <strong>community leaders</strong> driving social impact through strategic support.
+                    </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                    <Button asChild className="animate-fade-in-up animation-delay-600 hover:scale-105 transition-transform">
                         <Link href={CONSULTANT_FORM_LINK} target="_blank" rel="noopener noreferrer">
-                            Join as a consultant
+                            Join as a Consultant
                         </Link>
                     </Button>
-                    <Button variant="secondary">
+                    <Button variant="secondary" asChild className="animate-fade-in-up animation-delay-600 hover:scale-105 transition-transform">
                         <Link href={BUSINESS_FORM_LINK} target="_blank" rel="noopener noreferrer">
-                            Request consulting services
+                            Request Consulting
                         </Link>
                     </Button>
                 </div>
