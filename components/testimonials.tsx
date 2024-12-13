@@ -23,6 +23,16 @@ const testimonials: Testimonial[] = [
         title: "Why Consult Your Community Hit Home for a Daughter of a Small Business Owner",
         url: "https://www.youtube.com/watch?v=PmY_d0iaSBY",
     },
+    {
+        id: 3,
+        title: "Transforming a Solo Venture Into a Thriving Community",
+        url: "https://www.youtube.com/watch?v=sKIRSh9CyE8",
+    },
+    {
+        id: 4,
+        title: "Helping a Solo Entrepreneur Find Her Voice",
+        url: "https://www.youtube.com/watch?v=GFTyuzJK5Hk",
+    }
 ];
 
 export default function VideoTestimonials() {
@@ -31,7 +41,7 @@ export default function VideoTestimonials() {
     const getYoutubeEmbedUrl = (url: string) => {
         try {
             const videoId = url.split("v=")[1]?.split("&")[0];
-            return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
         } catch (error) {
             console.error("Invalid YouTube URL:", error);
             return "";
@@ -51,8 +61,8 @@ export default function VideoTestimonials() {
     return (
         <section id="testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
             <FadeIn>
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl mb-4 text-primary">Our Impact Stories</h2>
+                <div className="text-center mb-12 space-y-4">
+                    <h2 className="text-3xl text-primary">Our Impact Stories</h2>
                     <p className="text-muted-foreground">Real experiences from our community</p>
                 </div>
 
