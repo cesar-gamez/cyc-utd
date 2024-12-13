@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
         id: 4,
         title: "Helping a Solo Entrepreneur Find Her Voice",
         url: "https://www.youtube.com/watch?v=GFTyuzJK5Hk",
-    }
+    },
 ];
 
 export default function VideoTestimonials() {
