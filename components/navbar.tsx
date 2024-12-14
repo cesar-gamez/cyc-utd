@@ -52,7 +52,7 @@ export default function Navbar() {
         >
             <nav className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-6" aria-label="Main Navigation">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-3" aria-label="Navigate to home">
+                <Link href="/#hero" className="flex items-center space-x-3" aria-label="Navigate to home">
                     <Image src="/logo.jpeg" width={40} height={40} alt="CYC UTD Logo" className="rounded-sm" priority />
                     <span className="text-xl text-muted-foreground hover:text-primary">Consult your Community</span>
                 </Link>
