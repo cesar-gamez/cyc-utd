@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK } from "@/lib/constants";
 
-function Hero() {
+// Changing these links here will also change them in the CallToAction component
+const CONSULTANT_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSd5XT3FPwk86U26VMZGqK2AOCwKMVekqwjTWpOxo-EExBn88A/viewform?usp=sf_link";
+const BUSINESS_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7ii-rArH4o6h9cMcsHe0lsaE0un3yXuoM3Vk9KA/viewform?usp=sf_link";
+
+const Hero = () => {
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
             {/* Background Image with Overlay */}
@@ -51,6 +54,6 @@ function Hero() {
             </div>
         </section>
     );
-}
+};
 
-export default Hero;
+export { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK, Hero };

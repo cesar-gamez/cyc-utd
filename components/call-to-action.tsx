@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK } from "@/lib/constants";
+import { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK } from "@/components/hero";
 import Image from "next/image";
 import Link from "next/link";
 
