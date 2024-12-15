@@ -5,22 +5,18 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight } from "lucide-react";
+import { Member } from "@/components/profile";
+import Link from "next/link";
 
 type CompanyLogo = {
     name: string;
     logo: string;
 };
 
-type TeamMember = {
-    first_name: string;
-    last_name: string;
-    headshot: string;
-};
-
 type RosterResponse = {
-    executives: TeamMember[];
-    senior_analysts: TeamMember[];
-    junior_analysts: TeamMember[];
+    executives: Member[];
+    senior_analysts: Member[];
+    junior_analysts: Member[];
 };
 
 const COMPANIES: CompanyLogo[] = [
@@ -39,7 +35,7 @@ const COMPANIES: CompanyLogo[] = [
 ];
 
 export default function Network() {
-    const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+    const [teamMembers, setTeamMembers] = useState<Member[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -75,8 +71,9 @@ export default function Network() {
             <div className="container mx-auto px-4 space-y-10 relative z-10">
                 <div className="text-center space-y-4">
                     <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Check Out Our Network</h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Our members have gone on to work at some of the most prestigious companies in the world.
+                    <p className="text-muted-foreground max-w-3xl mx-auto">
+                        Our consultants leverage the skills from their time apart of Consult Your Community and move on to top graduate schools and leading
+                        companies in a variety of industries.
                     </p>
                 </div>
 
@@ -113,9 +110,11 @@ export default function Network() {
                             </>
                         )}
                     </div>
-                    <Button variant="outline" size="lg" className="flex items-center gap-2">
-                        Meet the Team
-                        <ArrowRight className="w-4 h-4" />
+                    <Button variant="outline" size="lg" className="flex items-center gap-2" asChild>
+                        <Link href="/team">
+                            Meet the Team
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </Button>
                 </div>
             </div>

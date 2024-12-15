@@ -13,29 +13,22 @@ const Hero = () => {
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
-                <Image
-                    src="/hero.webp"
-                    alt="Community consulting team working together"
-                    className="object-cover object-[50%_30%] w-full h-full"
-                    quality={100}
-                    priority
-                    fill
-                />
+                <Image src="/hero.webp" alt="hero" className="object-cover object-[50%_30%] w-full h-full" quality={100} priority fill />
             </div>
 
             {/* Content Container */}
             <div className="relative max-w-screen-xl h-full px-4 mx-auto text-white z-10 text-center">
-                <h1 id="hero-title" className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 animate-fade-in-up">
+                <h1 id="hero-title" className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-fade-in-up">
                     Consult Your Community
                 </h1>
 
-                <div className="max-w-2xl mx-auto space-y-4 mb-8">
-                    <p className="font-light text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-200">
-                        A student-led UT Dallas organization dedicated to providing <strong>free consulting services</strong> to Dallas&apos;s small,
-                        minority-owned businesses and nonprofits.
+                <div className="max-w-3xl mx-auto space-y-4 mb-8">
+                    <p className="font-light text-base md:text-lg lg:text-xl animate-fade-in-up animation-delay-200">
+                        A student-led UT Dallas organization dedicated to providing pro-bono consulting services to Dallas&apos;s small, minority-owned
+                        businesses and nonprofits.
                     </p>
-                    <p className="font-light text-base md:text-lg lg:text-xl opacity-90 animate-fade-in-up animation-delay-400">
-                        We&apos;re more than consultants—we&apos;re <strong>community leaders</strong> driving social impact through strategic support.
+                    <p className="font-light text-base md:text-lg lg:text-xl animate-fade-in-up animation-delay-400">
+                        We&apos;re more than consultants. We&apos;re community leaders driving social impact through strategic support.
                     </p>
                 </div>
 
