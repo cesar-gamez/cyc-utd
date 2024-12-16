@@ -1,4 +1,4 @@
-from core.config import settings
+from api.core.config import settings
 from notion_client import Client
 
 NOTION_TOKEN = settings.notion_token

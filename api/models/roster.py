@@ -1,4 +1,4 @@
-from models.member import Member
+from api.models.member import Member
 from pydantic import BaseModel
 from typing import List
 

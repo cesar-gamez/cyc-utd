@@ -1,5 +1,5 @@
-from models.roster import Roster
-from models.member import Member
+from api.models.roster import Roster
+from api.models.member import Member
 
 def parse_roster(results):
     positions = {

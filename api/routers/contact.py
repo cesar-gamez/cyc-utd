@@ -1,5 +1,5 @@
-from core.email import send_email
-from models.contact_form import ContactForm
+from api.core.email import send_email
+from api.models.contact_form import ContactForm
 from fastapi import APIRouter, HTTPException
 
 router = APIRouter()

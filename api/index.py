@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import roster, health, contact
+from api.routers import roster, health, contact
 
 app = FastAPI(
     title="Consult Your Community API",

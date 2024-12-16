@@ -1,6 +1,6 @@
-from core.notion import get_cyc_roster
-from services.parse_roster import parse_roster
-from models.roster import Roster
+from api.core.notion import get_cyc_roster
+from api.services.parse_roster import parse_roster
+from api.models.roster import Roster
 from fastapi import APIRouter, HTTPException
 
 router = APIRouter()

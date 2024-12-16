@@ -1,4 +1,4 @@
-from core.config import settings
+from api.core.config import settings
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from fastapi import HTTPException
