@@ -48,7 +48,7 @@ const ProfileSkeleton = () => (
 const Profile = ({ first_name, last_name, email, major, graduation_year, linkedin, position, headshot }: Member) => (
     <div className="text-center space-y-3">
         <Avatar className="mx-auto size-24">
-            <AvatarImage src={headshot} alt={`${first_name} ${last_name}`} />
+            <AvatarImage src={headshot} alt={`${first_name} ${last_name}`} className="object-cover" />
             <AvatarFallback>
                 {first_name[0]}
                 {last_name[0]}
