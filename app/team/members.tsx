@@ -330,6 +330,15 @@ const junior_analysts = [
         linkedin: "https://www.linkedin.com/in/pranav-boyapati/",
         headshot: "/members/pranav-boyapati.jpg",
     },
+    {
+        first_name: "Ashna",
+        last_name: "Murali",
+        email: "test@gmail.com",
+        major: "Business",
+        graduation_year: 2027,
+        linkedin: "https://www.linkedin.com/in/",
+        headshot: "/members/pranav-boyapati.jpg",
+    },
 ];
 
 export { executives, senior_analysts, junior_analysts };
