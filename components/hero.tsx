@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 // Changing these links here will also change them in the CallToAction component
-const CONSULTANT_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSd5XT3FPwk86U26VMZGqK2AOCwKMVekqwjTWpOxo-EExBn88A/viewform?usp=sf_link";
+const CONSULTANT_FORM_LINK = "https://forms.gle/QDwYttKHcgveZFxf6";
 const BUSINESS_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7ii-rArH4o6h9cMcsHe0lsaE0un3yXuoM3Vk9KA/viewform?usp=sf_link";
 
 const Hero = () => {
